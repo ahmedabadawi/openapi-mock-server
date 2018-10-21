@@ -1,0 +1,44 @@
+{
+  "config": {
+    "defaults": {
+      "contentType": "application/json",
+      "noMatch": {
+        "code": 404,
+        "body": {
+          "message": "Not found"
+        }
+      }
+    }
+  },
+  "paths": [
+  {
+    "path": "/api/test",
+    "method": "GET",
+    "response": {
+      "code": 200,
+      "body": {
+        "message": "Some data for GET..."
+      }
+    }
+  },
+  {
+    "path": "/api/test",
+    "method": "POST|PUT",
+    "response": {
+      "code": 200,
+      "body": {
+        "message": "Some data for POST/PUT..."
+      }
+    }
+  },
+  {
+    "path": "/api/test2",
+    "method": "*",
+    "response": {
+      "code": 200,
+      "body": {
+        "message": "Some data for all methods..."
+      }
+    }
+  }]
+}
